@@ -14,7 +14,7 @@ function merge(left, right) {
   }
 
   const remaining = i < left.length ? left.slice(i) : right.slice(j);
-  return result.concat(remaining);
+  return [...result, ...remaining];
 }
 
 function mergeSort(arr) {

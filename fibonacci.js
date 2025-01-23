@@ -17,7 +17,7 @@ function fibsRec(n) {
   const previous = fibsRec(n - 1);
   const next = previous.at(-1) + previous.at(-2);
 
-  return previous.concat(next);
+  return [...previous, next];
 }
 
 console.log(fibs(8));
