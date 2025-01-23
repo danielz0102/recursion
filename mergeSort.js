@@ -13,15 +13,8 @@ function merge(left, right) {
     }
   }
 
-  for (; i < left.length; i++) {
-    result.push(left[i]);
-  }
-
-  for (; j < right.length; j++) {
-    result.push(right[j]);
-  }
-
-  return result;
+  const remaining = i < left.length ? left.slice(i) : right.slice(j);
+  return result.concat(remaining);
 }
 
 function mergeSort(arr) {
